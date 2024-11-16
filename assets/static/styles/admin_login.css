@@ -1,0 +1,53 @@
+.home_slider_container {
+    pointer-events: none;
+    user-select: none;
+}
+
+.home_slider_background {
+    pointer-events: none;
+    user-select: none;
+}
+
+.owl-carousel {
+    pointer-events: none;
+    user-select: none;
+}
+
+.owl-carousel .owl-item {
+    pointer-events: none;
+    user-select: none;
+}
+
+.home_slider_content {
+    pointer-events: auto;
+    user-select: auto;
+}
+
+.home_slider_form_container {
+    pointer-events: auto;
+    user-select: auto;
+}
+
+.login-form {
+    pointer-events: auto;
+    user-select: auto;
+}
+
+input[type="text"],
+input[type="password"] {
+    pointer-events: auto;
+    user-select: auto;
+}
+
+button {
+    pointer-events: auto;
+    user-select: auto;
+}
+
+/* Prevent text selection on non-form elements */
+:not(input):not(textarea) {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

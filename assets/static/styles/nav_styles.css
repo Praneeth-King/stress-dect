@@ -1,0 +1,123 @@
+/* Modern Navigation Bar Styles */
+.header_container {
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+}
+
+.header_content {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+}
+
+.logo_text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo_text span {
+    color: #3498db;
+}
+
+.main_nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main_nav li {
+    position: relative;
+}
+
+.main_nav li a {
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.main_nav li a:hover {
+    color: #3498db;
+}
+
+.main_nav li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.main_nav li a:hover::after {
+    width: 100%;
+}
+
+/* Active Link Style */
+.main_nav li.active a {
+    color: #3498db;
+}
+
+.main_nav li.active a::after {
+    width: 100%;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .header_content {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo_container {
+        margin-bottom: 15px;
+    }
+
+    .main_nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main_nav li a {
+        padding: 5px 0;
+    }
+}
+
+/* Container Styles */
+.super_container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hide Footer if needed */
+.footer {
+    display: none !important;
+}

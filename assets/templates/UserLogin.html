@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<div class="login-container">
+    <form class="login-form" method="post" action="{%url 'UserLoginCheck'%}">
+        {% csrf_token %}
+        <h2>User Login</h2>
+        
+        {% if messages %}
+        {% for message in messages %}
+        <div class="error-message show">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        
+        <div class="form-group">
+            <label for="loginid">Username</label>
+            <input type="text" id="loginid" name="loginid" placeholder="Enter your username" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="pswd">Password</label>
+            <input type="password" id="pswd" name="pswd" placeholder="Enter your password" required>
+        </div>
+        
+        <button type="submit" class="submit-btn">Login</button>
+        
+        <div class="form-footer">
+            <p>Don't have an account? <a href="{%url 'UserRegister'%}">Register here</a></p>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

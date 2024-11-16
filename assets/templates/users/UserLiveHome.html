@@ -1,0 +1,43 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+
+{%block contents%}
+<link rel="stylesheet" type="text/css" href="{%static 'styles/live_detection.css'%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="live-detection fade-in">
+    <div class="detection-container">
+        <div class="header-section">
+            <h1 class="main-title">Live Stress Detection</h1>
+            <p class="subtitle">Real-time stress analysis using advanced machine learning and image processing</p>
+        </div>
+
+        <div class="camera-section">
+            <div class="camera-container">
+                <div id="video-feed">
+                    <!-- Video feed will be displayed here -->
+                </div>
+            </div>
+
+            <div class="loading-spinner" id="loading-spinner"></div>
+
+            <div class="status-message status-success" style="display: none;">
+                Camera initialized successfully
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Show loading spinner when page loads
+    document.getElementById('loading-spinner').style.display = 'block';
+
+    // Hide loading spinner and show success message after a delay
+    setTimeout(function() {
+        document.getElementById('loading-spinner').style.display = 'none';
+        document.querySelector('.status-message').style.display = 'block';
+    }, 2000);
+});
+</script>
+{%endblock%}

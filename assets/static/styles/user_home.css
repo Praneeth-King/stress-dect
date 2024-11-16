@@ -1,0 +1,223 @@
+/* Modern styling for User Home page */
+.home {
+    position: relative;
+    width: 100%;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 80px);
+    padding: 40px 0;
+}
+
+.home_slider_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Two-Column Layout */
+.content-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.left-content, .right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Feature Section - Left Side */
+.feature-section {
+    padding: 20px;
+    height: 100%;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #7f8c8d;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    background: #2980b9;
+    color: white;
+    text-decoration: none;
+    transform: translateX(5px);
+}
+
+.action-button i {
+    transition: transform 0.3s ease;
+}
+
+.action-button:hover i {
+    transform: translateX(5px);
+}
+
+/* Info Section - Right Side */
+.info-section {
+    padding: 20px;
+    height: 100%;
+}
+
+.info-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: #7f8c8d;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-card ul li {
+    color: #7f8c8d;
+    font-size: 16px;
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.info-card ul li:before {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin-bottom: 60px;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.hero-section h3 {
+    font-size: 1.5rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section .lead {
+    font-size: 1.2rem;
+    color: #495057;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        padding: 20px 0;
+    }
+
+    .feature-section,
+    .info-section {
+        padding: 10px;
+    }
+
+    .feature-card,
+    .info-card {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .feature-card h3,
+    .info-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* Navigation Improvements */
+.main_nav li a {
+    position: relative;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main_nav li a:hover {
+    color: #3498db;
+}
+
+.main_nav li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.main_nav li a:hover::after {
+    width: 100%;
+}

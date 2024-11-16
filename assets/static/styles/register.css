@@ -1,0 +1,248 @@
+.register-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.register-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #14bdee, #1ba9d1);
+}
+
+.register-form {
+    width: 100%;
+}
+
+.register-form table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+.register-form td {
+    padding: 8px;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.register-form td:first-child {
+    width: 30%;
+    font-weight: 600;
+    color: #384158;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="password"],
+.register-form input[type="email"],
+.register-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #384158;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.register-form textarea {
+    min-height: 100px;
+    resize: none;
+    font-family: inherit;
+}
+
+.register-form input[type="text"]:hover,
+.register-form input[type="password"]:hover,
+.register-form input[type="email"]:hover,
+.register-form textarea:hover {
+    border-color: #14bdee;
+}
+
+.register-form input[type="text"]:focus,
+.register-form input[type="password"]:focus,
+.register-form input[type="email"]:focus,
+.register-form textarea:focus {
+    border-color: #14bdee;
+    box-shadow: 0 0 0 3px rgba(20, 189, 238, 0.15);
+    outline: none;
+    transform: translateY(-1px);
+}
+
+.register-button {
+    background: linear-gradient(45deg, #14bdee, #1ba9d1);
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(20, 189, 238, 0.3);
+}
+
+.register-button:active {
+    transform: translateY(0);
+}
+
+.success-message {
+    color: #28a745;
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+}
+
+.register-title {
+    color: #384158;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Roboto Slab', serif;
+    position: relative;
+}
+
+.register-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #14bdee;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Bootstrap Overrides */
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #495057;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: 0;
+}
+
+textarea.form-control {
+    min-height: 100px !important;
+    width: 100% !important;
+    resize: none;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #495057;
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+    border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;
+    padding: 1.5rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #0b5ed7, #0bb5d7);
+    transform: translateY(-1px);
+}
+
+.alert {
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    textarea.form-control {
+        min-height: 80px !important;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

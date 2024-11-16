@@ -1,0 +1,72 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+
+{%block contents%}
+<link rel="stylesheet" type="text/css" href="{%static 'styles/user_home.css'%}">
+
+<div class="home">
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-75">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 text-dark mb-4">Stress Detection System</h1>
+                    <h3 class="text-secondary mb-4">Advanced Wellness Monitoring Platform</h3>
+                    <p class="lead text-muted">
+                        Using cutting-edge AI technology to analyze and detect stress levels for better well-being.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Left Column - Feature Cards -->
+            <div class="col-md-6">
+                <div class="feature-section">
+                    <div class="feature-card">
+                        <h3>Image Analysis</h3>
+                        <p>Upload your image for instant stress level detection using advanced image processing algorithms.</p>
+                        <a href="{%url 'UploadImageForm'%}" class="action-button">
+                            Start Analysis <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Live Detection</h3>
+                        <p>Real-time stress monitoring through your webcam with immediate feedback and analysis.</p>
+                        <a href="{%url 'UserLiveCameDetect'%}" class="action-button">
+                            Start Detection <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Info Cards -->
+            <div class="col-md-6">
+                <div class="info-section">
+                    <div class="info-card">
+                        <h3>What is Stress Detection?</h3>
+                        <p>Stress detection uses advanced technology to identify signs of stress through facial expressions and behavioral patterns.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>How it Works</h3>
+                        <p>Our system analyzes facial features and expressions to determine stress levels with high accuracy.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Benefits</h3>
+                        <ul>
+                            <li>Early stress detection</li>
+                            <li>Real-time monitoring</li>
+                            <li>Accurate analysis</li>
+                            <li>Immediate results</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,178 @@
+/* Upload Form Styles */
+.features {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 80px);
+}
+
+.section_title_container {
+    margin-bottom: 40px;
+}
+
+.section_title {
+    color: #2c3e50;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Upload Form Card */
+.upload-card {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* File Upload Area */
+.file-upload-area {
+    border: 2px dashed #3498db;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.file-upload-area:hover {
+    border-color: #2980b9;
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.file-upload-area strong {
+    display: block;
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.file-upload-area input[type="file"] {
+    display: none;
+}
+
+.upload-icon {
+    font-size: 48px;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.file-upload-text {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Upload Button */
+.upload-btn {
+    background: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.upload-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Success Message */
+.success-message {
+    color: #27ae60;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Results Table */
+.results-section {
+    margin-top: 60px;
+}
+
+.results-title {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+    background: #2c3e50;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px;
+    border: none;
+}
+
+.table tbody td {
+    padding: 15px;
+    vertical-align: middle;
+    border-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Download Button in Table */
+.download-btn {
+    padding: 8px 15px;
+    background: #3498db;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #2980b9;
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features {
+        padding: 40px 0;
+    }
+
+    .section_title {
+        font-size: 24px;
+    }
+
+    .upload-card {
+        padding: 20px;
+        margin: 0 15px;
+    }
+
+    .file-upload-area {
+        padding: 20px;
+    }
+
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

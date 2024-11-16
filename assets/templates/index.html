@@ -1,0 +1,87 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block contents%}
+<div class="home-wrapper">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="animate-title">Stress Detection System</h1>
+            <h2 class="animate-subtitle">Empowering IT Professionals with AI-Driven Wellness</h2>
+            <div class="hero-buttons">
+                <a href="{%url 'UserLogin'%}" class="btn-primary">Get Started</a>
+                <a href="{%url 'UserRegister'%}" class="btn-secondary">Register Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa fa-camera"></i>
+                        </div>
+                        <h3>Real-Time Detection</h3>
+                        <p>Advanced image processing for instant stress level analysis</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa fa-brain"></i>
+                        </div>
+                        <h3>AI-Powered Analysis</h3>
+                        <p>Machine learning algorithms for accurate stress assessment</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <h3>Personalized Care</h3>
+                        <p>Customized recommendations for stress management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-content">
+                        <h2>Why Choose Our System?</h2>
+                        <ul class="feature-list">
+                            <li><i class="fa fa-check"></i> Live stress monitoring with facial recognition</li>
+                            <li><i class="fa fa-check"></i> Professional counseling support</li>
+                            <li><i class="fa fa-check"></i> Regular wellness assessments</li>
+                            <li><i class="fa fa-check"></i> Data-driven insights</li>
+                            <li><i class="fa fa-check"></i> Confidential and secure</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-image">
+                        <img src="{%static 'images/course_1.jpg'%}" alt="Stress Detection System">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta-section">
+        <div class="container text-center">
+            <h2>Ready to Manage Stress Better?</h2>
+            <p>Join thousands of IT professionals who have improved their well-being with our system</p>
+            <a href="{%url 'UserRegister'%}" class="btn-cta">Start Your Journey</a>
+        </div>
+    </div>
+</div>
+{%endblock%}
