@@ -6,7 +6,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
 from django.conf import settings
-filepath = settings.MEDIA_ROOT + "\\" + 'stress_data.xlsx'
+filepath = settings.MEDIA_ROOT + '/stress_data.xlsx'
 df = pd.read_excel(filepath, header=None)
 
 df.columns=['Target', 'ECG(mV)', 'EMG(mV)','Foot GSR(mV)','Hand GSR(mV)', 'HR(bpm)','RESP(mV)']
